@@ -11,11 +11,6 @@
     <link rel="stylesheet" href="{% static 'styles.min.css' %}">
   </head>
   <body>
-    <p>
-        {% for post in popular_posts %}
-          { post.title }
-        {% endfor %}
-    </p>
     <!--================Header Menu Area =================-->
     <header class="header_area">
       <div class="main_menu">
@@ -61,6 +56,15 @@
           </div>
         </div>
       </section>
+      <div class="flex-fill" style="margin-right: 30px;">
+        <div class="card blog__slide text-center">
+          <div class="blog__slide__img">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+      
       <!--================Hero Banner end =================-->
 
       <!--================ Blog slider start =================-->
