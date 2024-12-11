@@ -64,7 +64,7 @@
           </div>
         </div>
       </div>
-      
+
       <!--================Hero Banner end =================-->
 
       <!--================ Blog slider start =================-->
@@ -113,7 +113,6 @@
         </div>
       </section>
       <!--================ Blog slider end =================-->
-
       <!--================ Start Blog Post Area =================-->
       <section class="blog-post-area section-margin mt-4">
         <div class="container">
@@ -121,6 +120,8 @@
             <div class="col-lg-8">
               <div class="single-recent-blog-post">
                 <div class="thumb">
+                  {% block fresh_posts %}
+                  {% endblock %}
                   {% load static %}
                   <img class="img-fluid" src="{% static 'img/blog/blog1.png' %}" alt="">
                   <ul class="thumb-info">

@@ -1,21 +1,44 @@
 {% extends 'template.html' %}
-
-{#{% block content %}#}
-{#  {% for post in context.most_popular_posts %}#}
-{#    <div>#}
-{#      <img src="{{ post.image_url }}" width="300" height="200">#}
-{#      <h3>{{ post.title }}</h3>#}
-{#      <h3>{{ post.published_at }}</h3>#}
-{#    </div>#}
-{#  {% endfor %}#}
-{#{% endblock %}#}
+{% load static %}
 
 {% block content %}
+  <div class="container_grid" style="margin-right: 30px;">
   {% for post in context.most_popular_posts %}
-      <div style="display: inline-block; margin-right: 30px;">
-        <img src="{{ post.image_url }}" width="300" height="200">
+      <div class="blog__slide__img" style="margin-right: 30px;">
+        {% if post.image_url %}
+        	<img src="{{ post.image_url }}" width="300" height="200">
+        {% else %}
+          <img src="{% static 'img/banner/blog.png' %}">
+        {% endif %}
         <h3>{{ post.title }}</h3>
         <h3>{{ post.published_at }}</h3>
       </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+
+{% block fresh_posts %}
+  {% for post in context.fresh_posts %}
+    <div class="single-recent-blog-post">
+      <div class="thumb">
+        {% if post.image_url %}
+          <img src="{{ post.image_url }}" class="post-image">
+        {% else %}
+          <img src="{% static 'img/banner/blog.png' %}" class="post-image">
+        {% endif %}
+        <ul class="thumb-info">
+          <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
+          <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at}}</a></li>
+          <li><a href="#"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comments</a></li>
+        </ul>
+      </div>
+      <div class="details mt-20">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.text }}</p>
+        <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+      </div>
+    </div>
   {% endfor %}
 {% endblock %}
+
