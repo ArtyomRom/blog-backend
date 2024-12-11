@@ -19629,3 +19629,26 @@ a {
     height: 100%;
     width: 100%
 }
+.row {
+display: inline-block;
+flex-wrap: wrap;
+}
+
+.card {
+    margin-bottom: 60px; /* Задает расстояние между карточками */;
+    margin-right: 10px;
+}
+
+.container_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+
+  justify-content: center;
+}
+
+.post-image {
+    width: 750px; /* Ширина изображения */
+    height: 400px; /* Высота изображения */
+    object-fit: cover; /* Заполнение области, обрезая изображение, если нужно */
+}
