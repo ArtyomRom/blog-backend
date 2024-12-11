@@ -21,13 +21,13 @@
 {% block fresh_posts %}
   {% for post in context.fresh_posts %}
     <div class="single-recent-blog-post">
-      <div class="thumb">
+      <div class="thumb" style="max-width: 550px">
         {% if post.image_url %}
           <img src="{{ post.image_url }}" class="post-image">
         {% else %}
           <img src="{% static 'img/banner/blog.png' %}" class="post-image">
         {% endif %}
-        <ul class="thumb-info">
+        <ul class="thumb-info" style="max-width: 550px">
           <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
           <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at}}</a></li>
           <li><a href="#"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comments</a></li>
