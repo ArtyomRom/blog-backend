@@ -19646,23 +19646,6 @@ flex-wrap: wrap;
     height: 400px; /* Высота изображения */
     object-fit: cover; /* Заполнение области, обрезая изображение, если нужно */
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
-}
-
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-.box2 {
-  grid-column-start: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
 
 .container_grid_1 {
   grid-template-columns: auto auto;
