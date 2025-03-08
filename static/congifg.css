@@ -1,0 +1,6 @@
+/* config.css */
+.block {
+  margin-bottom: 2px; /* Отступ в два пикселя между блоками */
+  padding: 10px; /* Внутренний отступ */
+  background-color: lightgray; /* Фон для визуализации */
+}
