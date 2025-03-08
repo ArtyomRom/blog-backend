@@ -135,7 +135,11 @@ dmypy.json
 .pytype/
 
 # Cython debug symbols
+
 cython_debug/
 .idea
 .gitkeep
 .media
+
+cython_debug/
+
